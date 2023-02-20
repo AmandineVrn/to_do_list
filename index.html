@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>my to do list</h1>
+    </header>
+    <main>
+        <div class="b_list">
+            <input id="input_titre" type="text" placeholder="Title">
+            <div id="list_content">
+                <ul>
+                    <li><input type="checkbox"><input type="text"></li>
+                </ul>
+            </div>
+        </div>
+        <button onclick="addList()">Add Content</button>
+        <script>
+            function addList() {
+                var b_list = '<div class="b_list"><input id="input_titre" type="text" placeholder="Title"><div id="list_content"><ul><li><input type="checkbox"><input type="text"></li></ul></div></div>';
+                document.getElementById('b_list').innerHTML += b_list
+            }
+        </script>
+
+    </main>
+</body>
+</html>
