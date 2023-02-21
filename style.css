@@ -21,6 +21,7 @@ main{
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
     /* border: 1px solid red; */
     justify-self: center;
     align-self: center;
@@ -29,9 +30,12 @@ main{
 
 #listes{
     display: flex;
+    justify-content: center;
+    min-height: 400px;
+    max-width: max-content;
     flex-direction: row;
     width: 100%;
-    overflow-x: auto;
+    flex-wrap: wrap;
 }
 
 .b_list{
@@ -70,7 +74,21 @@ input:focus-visible{
     outline: none;
 }
 
+#checkbox{
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+}
+
+input:checked + .list_item{
+    text-decoration: line-through;
+}
+
 ul{
+    position: relative;
     padding: 0;
 }
 
@@ -82,28 +100,32 @@ li{
     border: 1px solid transparent;
 }
 
-#list_item{
+.list_item{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 3px;
     /* width: 150px; */
 }
 
 
 
-input[type=checkbox] {
-    width: 20px;
-    
-}
 
-#button_addlist{
+
+button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #8675A9;
+    background-color: transparent;
     border: 1px solid #FFF;
     color: #FFF;
     font-size: 1em;
     border-radius: 1em;
     height: 1.5em;
     width: 1.5em;
+}
+
+#button_addlist{
+    width: max-content;
+    margin: 0 1em;
+    padding: 10px;
 }

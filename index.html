@@ -10,7 +10,8 @@
 </head>
 <body>
     <header>
-        <h1>my to do list</h1>
+        <h1>my to do lists</h1>
+        <button id="button_addlist" onclick="addList()">+ Add a List</button>
     </header>
     <main>
         <div id="listes">
@@ -18,13 +19,12 @@
                 <input id="input_titre" type="text" placeholder="Title">
                 <div class="list_content">
                     <ul>
-                        <li><input type="checkbox"><input id="list_item" type="text"></li>
+                        <li><input id="checkbox" type="checkbox"><input class="list_item" type="text"></li>
                     </ul>
                 </div>
-                <button onclick="addItem(this.parentNode)">+</button>
+                <button id="button_additem" onclick="addItem(this.parentNode)">+</button>
             </div>
         </div>
-        <button onclick="addList()">+</button>
     </main>
 </body>
 </html>
