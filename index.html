@@ -16,6 +16,7 @@
     <main>
         <div id="listes">
             <div class="b_list" id="b_list1">
+                <button id="button_delete" class="delete_list_button" onclick="deleteList(this.parentNode)">x</button>
                 <input id="input_titre" type="text" placeholder="Title">
                 <div class="list_content">
                     <ul>
@@ -24,6 +25,7 @@
                 </div>
                 <button id="button_additem" onclick="addItem(this.parentNode)">+</button>
             </div>
+            
         </div>
     </main>
 </body>

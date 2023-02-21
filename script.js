@@ -6,7 +6,11 @@ function addItem(current_list) {
 }
   
 function addList() {
-    var more_list = '<div class="b_list"><input id="input_titre" type="text" placeholder="Title"><div class="list_content"><ul><li><input id="checkbox" type="checkbox"><input class="list_item" type="text"></li></ul></div><button onclick="addItem(this.parentNode)">+</button></div>';
+    var more_list = '<div class="b_list"><button id="button_delete" class="delete_list_button" onclick="deleteList(this.parentNode)">x</button><input id="input_titre" type="text" placeholder="Title"><div class="list_content"><ul><li><input id="checkbox" type="checkbox"><input class="list_item" type="text"></li></ul></div><button onclick="addItem(this.parentNode)">+</button></div>';
     document.getElementById('listes').innerHTML += more_list;
+}
+
+function deleteList(listElement) {
+    listElement.remove();
 }
 
