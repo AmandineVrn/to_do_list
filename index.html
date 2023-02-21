@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>My To Do List</title>
 </head>
 <body>
@@ -12,28 +13,18 @@
         <h1>my to do list</h1>
     </header>
     <main>
-        <div class="b_list">
-            <input id="input_titre" type="text" placeholder="Title">
-            <div class="list_content">
-                <ul>
-                    <li><input type="checkbox"><input type="text"></li>
-                </ul>
+        <div id="listes">
+            <div class="b_list" id="b_list1">
+                <input id="input_titre" type="text" placeholder="Title">
+                <div class="list_content">
+                    <ul>
+                        <li><input type="checkbox"><input id="list_item" type="text"></li>
+                    </ul>
+                </div>
+                <button onclick="addItem(this.parentNode)">+</button>
             </div>
-            <button onclick="addList()">+</button>
         </div>
-        
-        <script>
-            function addList() {
-                var b_lists = document.getElementsByClassName('b_list');
-                for (var i = 0; i < b_lists.length; i++) {
-                    var list_content = b_lists[i].getElementsByClassName('list_content')[0];
-                    var new_content = document.createElement('ul');
-                    new_content.innerHTML = '<li><input type="checkbox"><input type="text"></li>';
-                    list_content.appendChild(new_content);
-                }
-            }
-        </script>
-
+        <button onclick="addList()">+</button>
     </main>
 </body>
 </html>
